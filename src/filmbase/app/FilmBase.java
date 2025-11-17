@@ -28,5 +28,13 @@ public class FilmBase {
     public void start(){
         System.out.println("FilmBasen er startet");
         initFilms();
+        printList(allFilms);
+    }
+
+    private void printList(Collection<Film>films){
+        System.out.println("Printing list of all films:");
+        for(Film f: films){
+            System.out.println(f.getTitle() + ", " + f.getYear());
+        }
     }
 }
