@@ -15,6 +15,10 @@ public class PlayList {
         }
     }
 
+    public ArrayList<Film> getPlaylist() {
+        return playlist;
+    }
+
     public Film playNextFilm(){
         if(playlist.isEmpty()){
             System.out.println("Can't play next movie, because the playlist is empty");
