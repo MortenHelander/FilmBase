@@ -7,6 +7,7 @@ public class PlayList {
 
     public boolean addFilm(Film film){
         if(hasFilm(film)){
+            System.out.println("Can't add "+film.getTitle() + " because it is already on the playlist");
             return false;
         }else {
             playlist.add(film);

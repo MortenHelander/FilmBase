@@ -44,6 +44,7 @@ public class FilmBase {
     private void testPlayList(){
         PlayList playList = new PlayList();
         playList.addFilm(allFilms.get(1));
+        playList.addFilm(allFilms.get(1));
         playList.addFilm(allFilms.get(4));
         playList.addFilm(allFilms.get(7));
         System.out.println(playList.returnPlayList());
