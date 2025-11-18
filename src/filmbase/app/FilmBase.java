@@ -1,12 +1,14 @@
 package filmbase.app;
 
 import filmbase.data.Film;
+import filmbase.data.PlayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class FilmBase {
-    private Collection<Film> allFilms = new ArrayList<>();
+    private List<Film> allFilms = new ArrayList<>();
 
     public FilmBase(){
 
@@ -28,7 +30,8 @@ public class FilmBase {
     public void start(){
         System.out.println("FilmBasen er startet");
         initFilms();
-        printList(allFilms);
+        //printList(allFilms);
+        testPlayList();
     }
 
     private void printList(Collection<Film>films){
@@ -36,5 +39,20 @@ public class FilmBase {
         for(Film f: films){
             System.out.println(f.getTitle() + ", " + f.getYear());
         }
+    }
+
+    private void testPlayList(){
+        PlayList playList = new PlayList();
+        playList.addFilm(allFilms.get(1));
+        playList.addFilm(allFilms.get(4));
+        playList.addFilm(allFilms.get(7));
+        System.out.println(playList.returnPlayList());
+        System.out.println(playList.hasNext());
+        playList.playNextFilm();
+        System.out.println(playList.returnPlayList());
+        playList.playNextFilm();
+        System.out.println(playList.returnPlayList());
+        playList.playNextFilm();
+        System.out.println(playList.returnPlayList());
     }
 }
