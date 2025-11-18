@@ -16,16 +16,16 @@ public class FilmBase {
     }
 
     private void initFilms(){
-        allFilms.add(new Film("Interstellar", 2014, Genre.ScienceFiction));
-        allFilms.add(new Film("Inception", 2010, Genre.ScienceFiction));
-        allFilms.add(new Film("El Laberinto del Fauno", 2006, Genre.Fantasy));
+        allFilms.add(new Film("Interstellar", 2014, Genre.ScienceFiction, Genre.Drama));
+        allFilms.add(new Film("Inception", 2010, Genre.ScienceFiction, Genre.Drama, Genre.Thriller));
+        allFilms.add(new Film("El Laberinto del Fauno", 2006, Genre.Fantasy, Genre.Horror));
         allFilms.add(new Film("Lord of the Rings: The Fellowship of the Ring", 2001, Genre.Fantasy));
         allFilms.add(new Film("Lord of the Rings: The Two Towers", 2002, Genre.Fantasy));
         allFilms.add(new Film("Lord of the Rings: Return of the King", 2003, Genre.Fantasy));
-        allFilms.add(new Film("The Godfather", 1972, Genre.Crime));
-        allFilms.add(new Film("The Shawshank Redemption", 1994, Genre.Drama));
-        allFilms.add(new Film("Schindler's List", 1993, Genre.Drama));
-        allFilms.add(new Film("The Great Gatsby", 2013, Genre.Drama));
+        allFilms.add(new Film("The Godfather", 1972, Genre.Crime, Genre.Drama ));
+        allFilms.add(new Film("The Shawshank Redemption", 1994, Genre.Drama ));
+        allFilms.add(new Film("Schindler's List", 1993, Genre.Drama, Genre.War ));
+        allFilms.add(new Film("The Great Gatsby", 2013, Genre.Drama ));
     }
 
     public void start(){
@@ -38,7 +38,7 @@ public class FilmBase {
     private void printList(List<Film>films){
         System.out.println("Printing list of all films:");
         for(Film f: films){
-            System.out.println(f.getTitle() + " (" + f.getYear() + ") " + f.getGenre());
+            System.out.println(f.getTitle() + " (" + f.getYear() + ") " + f.getGenres());
         }
     }
 

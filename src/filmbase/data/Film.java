@@ -2,16 +2,17 @@ package filmbase.data;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class Film {
     private String title;
     private int year;
     private Collection<Genre>genres = new ArrayList<>();
 
-    public Film(String title, int year, Genre genre) {
+    public Film(String title, int year, Genre... genres) {
         this.title = title;
         this.year = year;
-        this.genres.add(genre);
+        this.genres.addAll(List.of(genres));
     }
 
     public String getTitle() {
@@ -40,5 +41,9 @@ public class Film {
 
     public boolean hasGenre(Genre genre){
         return this.genres.contains(genre);
+    }
+
+    public void addGenre(Genre genre){
+        this.genres.add(genre);
     }
 }
