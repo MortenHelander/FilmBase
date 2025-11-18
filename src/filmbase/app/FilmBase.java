@@ -50,6 +50,8 @@ public class FilmBase {
         playlist.addFilm(allFilms.get(7));
 
         printList(playlist.getPlaylist());
+        playlist.removeGenre(Genre.Drama);
+        printList(playlist.getPlaylist());
     }
 
     private void testPlayList(){

@@ -70,4 +70,9 @@ public class PlayList {
     public void removeAll(ArrayList<Film>films){
         playlist.removeAll(films);
     }
+
+    public void removeGenre(Genre genre){
+        playlist.removeIf( film -> film.hasGenre(genre));
+    }
+
 }
