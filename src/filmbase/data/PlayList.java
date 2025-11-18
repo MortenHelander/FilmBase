@@ -29,9 +29,14 @@ public class PlayList {
         }
     }
 
-    public String hasNext(){
+    public boolean hasNext(){
+        if(playlist.isEmpty()){
+            System.out.println("The playlist is empty!");
+            return false;
+        }
         String next = playlist.getFirst().getTitle();
-        return "Next up on the playlist is: " + next;
+        System.out.println("Next up on the playlist is: " + next);
+        return true;
     }
 
     public int playlistSize(){
