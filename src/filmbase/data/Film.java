@@ -7,6 +7,17 @@ public class Film {
     private int year;
     private Set<Genre> genres = new HashSet<>();
 
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Film film)) return false;
+        return year == film.year && Objects.equals(title, film.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, year);
+    }
+
     public Film(String title, int year, Genre... genres) {
         this.title = title;
         this.year = year;
@@ -45,5 +56,8 @@ public class Film {
         this.genres.add(genre);
     }
 
-
+    @Override
+    public String toString() {
+        return title + " (" + year + ") ";
+    }
 }
