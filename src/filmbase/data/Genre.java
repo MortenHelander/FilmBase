@@ -11,5 +11,18 @@ public enum Genre {
     Action,
     ScienceFiction,
     Fantasy,
+    Mystery,
+    Biography,
+    History,
+    Sport,
+    Adventure,
+    Family,
+    FilmNoir,
+    Musical,
+    Scifi,
+    Western,
+    Music,
+
+
 
 }

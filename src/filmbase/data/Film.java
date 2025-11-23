@@ -5,7 +5,7 @@ import java.util.*;
 public class Film {
     private String title;
     private int year;
-    private Set<Genre> genres = new HashSet<>();
+    private Collection<Genre> genres = new HashSet<>();
 
     @Override
     public boolean equals(Object o) {
@@ -22,6 +22,12 @@ public class Film {
         this.title = title;
         this.year = year;
         this.genres.addAll(List.of(genres));
+    }
+
+    public Film(String title, int year, Collection<Genre> genres){
+        this.title = title;
+        this.year = year;
+        this.genres=genres;
     }
 
     public String getTitle() {
